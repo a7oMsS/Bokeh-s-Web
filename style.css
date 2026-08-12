@@ -393,7 +393,7 @@ textarea {
   border: 1px solid var(--panel-border);
   border-radius: 10px;
   padding: .75rem .85rem;
-  min-height: 20rem;
+  min-height: 30rem;
   resize: vertical;
   outline: none;
 }

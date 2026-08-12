@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bokeh's - Beta cerrada</title>
   <meta name="description" content="Acceso a la beta cerrada de Bokeh's." />
-  <link rel="icon" type="image/x-icon" href="LOGO.jpeg">
+  <link rel="icon" type="image/x-icon" href=logo.png">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body data-stage="locked" class="vignette-gradient">
@@ -34,8 +34,8 @@
     <!-- Paso 1: gate de código -->
     <section id="gate" class="panel">
       <p class="eyebrow">Bokeh's · Beta cerrada</p>
-      <h1>Un mundo en Vacío espera su primer Bokeh.</h1>
-      <p class="lede">Este acceso es solo para invitados. Si alguien te compartió un código, este es el primer paso.</p>
+      <h1>Un mundo vacío espera su primer Bokeh.</h1>
+      <p class="lede">Este acceso es solo para invitados. Si recibiste un código, este es el primer paso.</p>
 
       <form id="gate-form" novalidate>
         <label for="access-code">
@@ -50,8 +50,8 @@
     <!-- Paso 2: registro -->
     <section id="registro" class="panel" hidden>
       <p class="eyebrow">Paso 2 de 2</p>
-      <h2>Regístrate como Explorador beta</h2>
-      <p class="lede">Con esto desbloqueas el link de descarga de la demo.</p>
+      <h2>Regístrate como <strong><i>Explorador Beta</i></strong></h2>
+      <p class="lede">Para desbloquear el link de descarga de la demo.</p>
 
       <form id="registro-form" name="registro-beta" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
         <input type="hidden" name="form-name" value="registro-beta" />
@@ -65,7 +65,7 @@
         </label>
 
         <label for="email">
-          Email
+          Correo
           <input id="email" name="email" type="email" required />
         </label>
 
@@ -90,13 +90,13 @@
         <p>Contraseña de la página: <code id="itch-pass">—</code></p>
       </div>
 
-      <p class="lede">Guarda este link — no vuelve a aparecer si cierras la página.</p>
+      <p class="lede">Guarda este link - desaparece al cerra la página.</p>
       <a class="btn btn--ghost" href="feedback.html">Cuando termines de jugar → deja tu feedback</a>
     </section>
 
   </main>
 
-  <footer>Bokeh's — beta cerrada. Gracias por probarlo antes que nadie.</footer>
+  <footer>Bokeh's - beta cerrada. Gracias por probarlo antes que nadie.</footer>
 
   <script src="script.js"></script>
 </body>

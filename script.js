@@ -2,7 +2,7 @@
 const ACCESS_CODE = "LJOSSTEINN";                      
 const ITCH_URL = "https://a7omss.itch.io/bokehs-game";
 const ITCH_PASSWORD = "VIGNETTE150826";           
-const LAUNCH_DATE = "2026-08-11T00:00:00"; 
+const LAUNCH_DATE = "2026-08-15T00:00:00"; 
 // ============================================================
 const tooEarlySection = document.getElementById("too-early");
 const gateSectionEl = document.getElementById("gate");
@@ -62,6 +62,7 @@ if (gateForm) {
 
   gateForm.addEventListener("submit", (e) => {
     e.preventDefault();
+ 
     const input = document.getElementById("access-code").value.trim();
 
     if (input.toUpperCase() === ACCESS_CODE.toUpperCase()) {
@@ -80,6 +81,11 @@ if (gateForm) {
 
   registroForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    if (!registroForm.checkValidity()) {
+       registroForm.reportValidity();
+       return;
+    }
+
     registroError.hidden = true;
 
     submitToNetlify(registroForm)
@@ -111,6 +117,10 @@ if (feedbackForm) {
 
   feedbackForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    if (!feedbackForm.checkValidity()) {
+      feedbackForm.reportValidity();
+      return;
+    }
     feedbackError.hidden = true;
 
     submitToNetlify(feedbackForm)
@@ -137,6 +147,10 @@ if (colaboraForm) {
 
   colaboraForm.addEventListener("submit", (e) => {
     e.preventDefault();
+        if (!colaboraForm.checkValidity()) {
+      colaboraForm.reportValidity();
+      return;
+    }
     colaboraError.hidden = true;
 
     const habilidadesMarcadas = colaboraForm.querySelectorAll('input[name="habilidades"]:checked').length;

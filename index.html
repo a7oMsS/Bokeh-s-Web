@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bokeh's — Beta cerrada</title>
+  <meta name="description" content="Acceso a la beta cerrada de Bokeh's." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-stage="locked" class="vignette-gradient">
+
+  <div class="bokeh-field" aria-hidden="true">
+    <span class="bokeh-particle tier-1 p1"></span>
+    <span class="bokeh-particle tier-1 p2"></span>
+    <span class="bokeh-particle tier-1 p3"></span>
+    <span class="bokeh-particle tier-2 p4"></span>
+    <span class="bokeh-particle tier-2 p5"></span>
+    <span class="bokeh-particle tier-2 p6"></span>
+    <span class="bokeh-particle tier-3 p7"></span>
+    <span class="bokeh-particle tier-3 p8"></span>
+    <span class="bokeh-particle tier-3 p9"></span>
+  </div>
+
+  <main class="stage-wrap">
+
+      <!-- Antes de la fecha de apertura -->
+  <section id="too-early" class="panel" hidden>
+    <p class="eyebrow">Bokeh's · Beta cerrada</p>
+    <h1>Todavía es muy pronto para acceder.</h1>
+    <p class="lede">Este acceso se abre el <span id="launch-date-display">pronto</span>. Vuelve entonces.</p>
+  </section>
+
+    <!-- Paso 1: gate de código -->
+    <section id="gate" class="panel">
+      <p class="eyebrow">Bokeh's · Beta cerrada</p>
+      <h1>Un mundo en Vacío espera su primer Bokeh.</h1>
+      <p class="lede">Este acceso es solo para invitados. Si alguien te compartió un código, este es el primer paso.</p>
+
+      <form id="gate-form" novalidate>
+        <label for="access-code">
+          Código de acceso
+          <input id="access-code" name="access-code" type="text" autocomplete="off" autocapitalize="off" required />
+        </label>
+        <button type="submit">Entrar</button>
+        <p class="field-error" id="gate-error" role="alert" hidden>Ese código no es válido. Revisa mayúsculas y espacios.</p>
+      </form>
+    </section>
+
+    <!-- Paso 2: registro -->
+    <section id="registro" class="panel" hidden>
+      <p class="eyebrow">Paso 2 de 2</p>
+      <h2>Regístrate como Explorador beta</h2>
+      <p class="lede">Con esto desbloqueas el link de descarga de la demo.</p>
+
+      <form id="registro-form" name="registro-beta" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="registro-beta" />
+        <p class="hidden-field" aria-hidden="true">
+          <label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+        </p>
+
+        <label for="nombre">
+          Nombre
+          <input id="nombre" name="nombre" type="text" required />
+        </label>
+
+        <label for="email">
+          Email
+          <input id="email" name="email" type="email" required />
+        </label>
+
+        <fieldset>
+          <legend>Plataforma</legend>
+          <label><input type="radio" name="plataforma" value="Windows" checked required /> Windows</label>
+          <label><input type="radio" name="plataforma" value="Android" /> Android</label>
+        </fieldset>
+
+        <button type="submit">Invocar acceso</button>
+        <p class="field-error" id="registro-error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <!-- Paso 3: acceso desbloqueado -->
+    <section id="acceso" class="panel" hidden>
+      <p class="eyebrow">Acceso desbloqueado</p>
+      <h2>Ya puedes descargar la demo</h2>
+
+      <div class="acceso-box">
+        <p>Link: <a id="itch-link" href="#" target="_blank" rel="noopener">—</a></p>
+        <p>Contraseña de la página: <code id="itch-pass">—</code></p>
+      </div>
+
+      <p class="lede">Guarda este link — no vuelve a aparecer si cierras la página.</p>
+      <a class="btn btn--ghost" href="feedback.html">Cuando termines de jugar → deja tu feedback</a>
+    </section>
+
+  </main>
+
+  <footer>Bokeh's — beta cerrada. Gracias por probarlo antes que nadie.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

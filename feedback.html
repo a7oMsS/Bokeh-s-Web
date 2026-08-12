@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bokeh's — Feedback</title>
+  <meta name="description" content="Cuéntanos qué tal la demo de Bokeh's." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-stage="unlocked">
+
+  <div class="bokeh-field" aria-hidden="true">
+    <span class="bokeh-particle tier-1 p1"></span>
+    <span class="bokeh-particle tier-1 p2"></span>
+    <span class="bokeh-particle tier-1 p3"></span>
+    <span class="bokeh-particle tier-2 p4"></span>
+    <span class="bokeh-particle tier-2 p5"></span>
+    <span class="bokeh-particle tier-2 p6"></span>
+    <span class="bokeh-particle tier-3 p7"></span>
+    <span class="bokeh-particle tier-3 p8"></span>
+    <span class="bokeh-particle tier-3 p9"></span>
+  </div>
+
+  <main class="stage-wrap">
+
+    <section id="feedback" class="panel">
+      <p class="eyebrow">Bokeh's · Feedback de la beta</p>
+      <h1>¿Qué tal estuvo?</h1>
+      <p class="lede">Notas, bugs, momentos raros, cosas que no entendiste — todo sirve.</p>
+
+      <form id="feedback-form" name="feedback-beta" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="feedback-beta" />
+        <p class="hidden-field" aria-hidden="true">
+          <label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+        </p>
+
+        <label for="fb-nombre">
+          Nombre
+          <input id="fb-nombre" name="nombre" type="text" required />
+        </label>
+
+        <label for="fb-email">
+          Email (el mismo del registro, si puedes)
+          <input id="fb-email" name="email" type="email" required />
+        </label>
+
+        <fieldset>
+          <legend>¿Qué tan bien te sentiste jugando? (1 = confuso, 5 = clarísimo)</legend>
+          <div class="rating">
+            <label><input type="radio" name="claridad" value="1" required /><span>1</span></label>
+            <label><input type="radio" name="claridad" value="2" /><span>2</span></label>
+            <label><input type="radio" name="claridad" value="3" /><span>3</span></label>
+            <label><input type="radio" name="claridad" value="4" /><span>4</span></label>
+            <label><input type="radio" name="claridad" value="5" /><span>5</span></label>
+          </div>
+        </fieldset>
+
+        <label for="fb-notas">
+          Notas, bugs, lo que se sintió raro o que te gustó. Cuéntame TODO.
+          <textarea id="fb-notas" name="notas" required></textarea>
+        </label>
+
+        <button type="submit">Enviar notas</button>
+        <p class="field-error" id="feedback-error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <section id="feedback-gracias" class="panel" hidden>
+      <p class="eyebrow">Recibido</p>
+      <h2>Gracias por jugar y por escribir esto.</h2>
+      <p class="lede">Tus notas van directo al Ljóssteinn del proyecto (o sea, a mí). Si quieres mandar algo más después, puedes volver a esta página cuando quieras.</p>
+    </section>
+
+  </main>
+
+  <footer>Bokeh's — beta cerrada. Gracias por probarlo antes que nadie.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

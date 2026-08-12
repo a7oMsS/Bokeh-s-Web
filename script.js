@@ -1,10 +1,7 @@
-// ============================================================
-// BOKEH'S — Beta cerrada
-// ⚠️ EDITA ESTAS 3 CONSTANTES ANTES DE COMPARTIR EL LINK CON TESTERS
-// ============================================================
-const ACCESS_CODE = "LJOSSTEINN";                       // código que le das a tus testers
-const ITCH_URL = "https://TU-USUARIO.itch.io/bokehs-beta"; // link de tu página restringida en itch.io
-const ITCH_PASSWORD = "TU-PASSWORD-DE-ITCH";              // password que configuraste en itch.io
+
+const ACCESS_CODE = "LJOSSTEINN";                      
+const ITCH_URL = "https://a7omss.itch.io/bokehs-game";
+const ITCH_PASSWORD = "VIGNETTE150826";           
 const LAUNCH_DATE = "2026-08-11T00:00:00"; 
 // ============================================================
 const tooEarlySection = document.getElementById("too-early");
@@ -76,7 +73,7 @@ if (gateForm) {
     } else {
       gateError.hidden = false;
       gateForm.classList.remove("shake");
-      void gateForm.offsetWidth; // reinicia la animación si se repite el error
+      void gateForm.offsetWidth;
       gateForm.classList.add("shake");
     }
   });
@@ -126,6 +123,39 @@ if (feedbackForm) {
         feedbackError.textContent =
           "No se pudo enviar. Revisa tu conexión e inténtalo de nuevo.";
         feedbackError.hidden = false;
+      });
+  });
+}
+
+// ---------- colabora.html ----------
+const colaboraForm = document.getElementById("colabora-form");
+
+if (colaboraForm) {
+  const colaboraError = document.getElementById("colabora-error");
+  const colaboraSection = document.getElementById("colabora");
+  const colaboraGracias = document.getElementById("colabora-gracias");
+
+  colaboraForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    colaboraError.hidden = true;
+
+    const habilidadesMarcadas = colaboraForm.querySelectorAll('input[name="habilidades"]:checked').length;
+    const otroTexto = document.getElementById("colab-otro").value.trim();
+    if (habilidadesMarcadas === 0 && otroTexto === "") {
+      colaboraError.textContent = 'Selecciona al menos una habilidad, o descríbela en "otro".';
+      colaboraError.hidden = false;
+      return;
+    }
+
+    submitToNetlify(colaboraForm)
+      .then((res) => {
+        if (!res.ok) throw new Error("network");
+        colaboraSection.hidden = true;
+        colaboraGracias.hidden = false;
+      })
+      .catch(() => {
+        colaboraError.textContent = "No se pudo enviar. Revisa tu conexión e inténtalo de nuevo.";
+        colaboraError.hidden = false;
       });
   });
 }

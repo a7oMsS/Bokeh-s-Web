@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bokeh's - Colabora</title>
+  <meta name="description" content="¿Quieres colaborar con Bokeh's? Cuéntame en qué." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" type="image/x-icon">
+</head>
+<body data-stage="unlocked">
+
+  <div class="bokeh-field" aria-hidden="true">
+    <span class="bokeh-particle tier-1 p1"></span>
+    <span class="bokeh-particle tier-1 p2"></span>
+    <span class="bokeh-particle tier-1 p3"></span>
+    <span class="bokeh-particle tier-2 p4"></span>
+    <span class="bokeh-particle tier-2 p5"></span>
+    <span class="bokeh-particle tier-2 p6"></span>
+    <span class="bokeh-particle tier-3 p7"></span>
+    <span class="bokeh-particle tier-3 p8"></span>
+    <span class="bokeh-particle tier-3 p9"></span>
+  </div>
+
+  <main class="stage-wrap">
+
+    <section id="colabora" class="panel">
+      <p class="eyebrow">Bokeh's · Colabora</p>
+      <h1>¿Te interesa contribuir a Bokeh's Game?</h1>
+      <p class="lede">Cuéntame sobre ti y cómo te gustaría ser parte de esto. Toda propuesta es bienvenida, sin compromiso.</p>
+
+      <form id="colabora-form" name="colabora-beta" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="colabora-beta" />
+        <p class="hidden-field" aria-hidden="true">
+          <label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+        </p>
+
+        <label for="colab-nombre">
+          Nombre
+          <input id="colab-nombre" name="nombre" type="text" required />
+        </label>
+
+        <fieldset>
+          <legend>Habilidades - Cómo o qué puedes aportar. No importa si eres nuevo o si ya tienes experiencia.</legend>
+          <label><input type="checkbox" name="habilidades" value="Programación" /> Programación</label>
+          <label><input type="checkbox" name="habilidades" value="Diseño" /> Diseño</label>
+          <label><input type="checkbox" name="habilidades" value="Dibujo / arte" /> Dibujo / arte</label>
+          <label><input type="checkbox" name="habilidades" value="Ideas" /> Ideas</label>
+          <label><input type="checkbox" name="habilidades" value="Producción de sonido" /> Producción de sonido</label>
+          <label><input type="checkbox" name="habilidades" value="Testeo" /> Testeo</label>
+          <label><input type="checkbox" name="habilidades" value="Escritura" /> Escritura</label>
+          <input id="colab-otro" name="habilidades_otro" type="text" placeholder="Otro (describe aquí)" />
+        </fieldset>
+
+        <label for="colab-razon">
+          Tu razón para unirte
+          <textarea id="colab-razon" name="razon" placeholder="Expandir portfolio, diversión, practicar, ayudar, tener algo que hacer..." required></textarea>
+        </label>
+
+        <button type="submit">Enviar</button>
+        <p class="field-error" id="colabora-error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <section id="colabora-gracias" class="panel" hidden>
+      <p class="eyebrow">Recibido</p>
+      <h2>Gracias por escribir.</h2>
+      <p class="lede">Lo leo y te contacto si encajamos en algo. Ya puedes cerrar esta página.</p>
+    </section>
+
+  </main>
+
+  <footer>Bokeh's - un mundo en Vacío que apenas empieza a despertar.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

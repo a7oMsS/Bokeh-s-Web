@@ -259,7 +259,7 @@ input[type="email"] {
 }
 
 #registro-form input[type="text"], #registro-form input[type="email"]{
-    font-size: 1.5rem; 
+  font-size: 1.5rem; 
   letter-spacing: normal;
   font-weight: 100;
   text-align: left;
@@ -271,6 +271,7 @@ input[type="email"]:focus {
 }
 
 input[type="radio"] { accent-color: var(--bokeh-gold); text-align: center; }
+input[type="checkbox"] { accent-color: var(--bokeh-gold);  width: 1.5em; height: 1.5em; cursor: pointer; }
 
 .hidden-field { position: absolute; left: -9999px; }
 
@@ -347,6 +348,13 @@ code {
 
 /* ---------- Feedback (rating) ---------- */
 
+#feedback-form input[type="text"], #feedback-form input[type="email"]{
+    font-size: 1.5rem; 
+  letter-spacing: normal;
+  font-weight: 100;
+  text-align: left;
+}
+
 .rating {
   display: flex;
   gap: .5rem;
@@ -399,4 +407,17 @@ footer {
   margin-top: 2rem;
   text-align: center;
   animation: rise .5s ease both 0.6s;
+}
+
+
+#colabora-form input[type="text"], #colabora-form input[type="email"]{
+  font-size: 1.5rem; 
+  letter-spacing: normal;
+  font-weight: 100;
+  text-align: left;
+}
+
+#colabora-form fieldset label{
+  align-items: center;
+  cursor: pointer;
 }

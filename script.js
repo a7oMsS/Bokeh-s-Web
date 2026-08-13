@@ -1,8 +1,8 @@
 
 const ACCESS_CODE = "LJOSSTEINN";                      
 const ITCH_URL = "https://a7omss.itch.io/bokehs-game";
-const ITCH_PASSWORD = "VIGNETTE140826";           
-const LAUNCH_DATE = "2026-08-14T00:00:00"; 
+const ITCH_PASSWORD = "VIGNETTE150826";           
+const LAUNCH_DATE = "2026-08-15T00:00:00"; 
 // ============================================================
 const tooEarlySection = document.getElementById("too-early");
 const gateSectionEl = document.getElementById("gate");
